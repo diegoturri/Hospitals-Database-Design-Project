@@ -1,0 +1,630 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.2
+-- Dumped by pg_dump version 14.2
+
+-- Started on 2022-07-19 19:09:43 CEST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3824 (class 0 OID 20764)
+-- Dependencies: 209
+-- Data for Name: indirizzo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.indirizzo VALUES ('Dal Grande Osor', 21, 37130, 'Verona', NULL);
+INSERT INTO public.indirizzo VALUES ('Giuseppe Randagio', 3, 37139, 'Verona', NULL);
+INSERT INTO public.indirizzo VALUES ('Aldonso', 5, 35110, 'Padova', NULL);
+INSERT INTO public.indirizzo VALUES ('Luigi Dosso', 53, 37139, 'Verona', NULL);
+INSERT INTO public.indirizzo VALUES ('Farnesa', 4, 35110, 'Padova', NULL);
+INSERT INTO public.indirizzo VALUES ('Giulia Oliosi', 2, 37139, 'Verona', 'b');
+INSERT INTO public.indirizzo VALUES ('Oroscopo', 21, 37139, 'Verona', '1');
+INSERT INTO public.indirizzo VALUES ('Farnesa', 1, 35110, 'Padova', NULL);
+INSERT INTO public.indirizzo VALUES ('Oriastello', 8, 37139, 'Verona', NULL);
+INSERT INTO public.indirizzo VALUES ('Mameli', 23, 37130, 'Verona', 'a');
+INSERT INTO public.indirizzo VALUES ('Dell orso', 93, 37130, 'Verona', NULL);
+INSERT INTO public.indirizzo VALUES ('Rossa', 4, 37138, 'Verona', 'l');
+INSERT INTO public.indirizzo VALUES ('Cuscinetto', 8, 20027, 'Milano', 'a');
+INSERT INTO public.indirizzo VALUES ('unimi', 0, 0, 'unimi', NULL);
+
+
+--
+-- TOC entry 3835 (class 0 OID 20875)
+-- Dependencies: 220
+-- Data for Name: stanza; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.stanza VALUES ('092302');
+INSERT INTO public.stanza VALUES ('092345');
+INSERT INTO public.stanza VALUES ('092889');
+INSERT INTO public.stanza VALUES ('092394');
+INSERT INTO public.stanza VALUES ('293848');
+INSERT INTO public.stanza VALUES ('293847');
+INSERT INTO public.stanza VALUES ('092888');
+INSERT INTO public.stanza VALUES ('099002');
+INSERT INTO public.stanza VALUES ('092332');
+INSERT INTO public.stanza VALUES ('099429');
+INSERT INTO public.stanza VALUES ('093949');
+INSERT INTO public.stanza VALUES ('012020');
+INSERT INTO public.stanza VALUES ('010023');
+INSERT INTO public.stanza VALUES ('019203');
+
+
+--
+-- TOC entry 3838 (class 0 OID 20905)
+-- Dependencies: 223
+-- Data for Name: esterna; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.esterna VALUES ('012020', '9:00-20:00', 3462833942, 'Aldonso', 5, 35110);
+INSERT INTO public.esterna VALUES ('010023', '9:00-20:00', 3449098892, 'Luigi Dosso', 53, 37139);
+INSERT INTO public.esterna VALUES ('019203', '9:00-20:00', 3273688940, 'Oriastello', 8, 37139);
+
+
+--
+-- TOC entry 3839 (class 0 OID 20922)
+-- Dependencies: 224
+-- Data for Name: ospedale; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.ospedale VALUES ('01', 'Borgo Trento', 'Giuseppe Randagio', 3, 37139);
+INSERT INTO public.ospedale VALUES ('02', 'Borgo Roma', 'Dal Grande Osor', 21, 37130);
+INSERT INTO public.ospedale VALUES ('03', 'Lasciavera', 'Farnesa', 1, 35110);
+INSERT INTO public.ospedale VALUES ('ehe', 'naninani', 'Farnesa', 1, 35110);
+INSERT INTO public.ospedale VALUES ('hla', 'shadow clone Jutzu', 'Farnesa', 1, 35110);
+INSERT INTO public.ospedale VALUES ('zla', 'parson project', 'Luigi Dosso', 53, 37139);
+
+
+--
+-- TOC entry 3854 (class 0 OID 21154)
+-- Dependencies: 239
+-- Data for Name: accordo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3834 (class 0 OID 20870)
+-- Dependencies: 219
+-- Data for Name: allestimento; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.allestimento VALUES ('stanza chirurgica', 'ricoveri');
+INSERT INTO public.allestimento VALUES ('Ambulatorio generale', 'esami');
+INSERT INTO public.allestimento VALUES ('ricovero intensivo', 'ricoveri');
+INSERT INTO public.allestimento VALUES ('ricovero', 'ricoveri');
+
+
+--
+-- TOC entry 3827 (class 0 OID 20781)
+-- Dependencies: 212
+-- Data for Name: persona; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.persona VALUES ('BRGDNL97J23U928I', 'Daniela', 'Borgia', '1997-09-15', 'Verona', 3472893990, 'daniela@gmail.com', 'Oroscopo', 21, 37139, NULL, NULL);
+INSERT INTO public.persona VALUES ('BSCNTN87L13I876E', 'Antonio', 'Boscaini', '1987-07-13', 'Bussolengo', 458907765, 'antonio@gmail.com', 'Dell orso', 93, 37130, NULL, NULL);
+INSERT INTO public.persona VALUES ('FBBCZZ91K283E   ', 'Fabio', 'Cozza', '1991-01-01', 'Milano', 3647788746, 'fabio@gmail.com', 'Aldonso', 5, 35110, NULL, NULL);
+INSERT INTO public.persona VALUES ('PNNGLL98H6Y625E ', 'Laura', 'Penna', '1990-03-12', 'Verona', 346778998, 'penna@gmail.com', 'Mameli', 23, 37130, NULL, NULL);
+INSERT INTO public.persona VALUES ('RSSMRR89J21O716E', 'Mario', 'Rossi', '1998-12-31', 'Milano', 3467787912, 'mario@gmail.com', 'Cuscinetto', 8, 20027, NULL, NULL);
+INSERT INTO public.persona VALUES ('RSTLCC83J92L897W', 'Lucia', 'Rosati', '2000-10-02', 'Verona', 4567388872, 'Lucia@gmail.com', 'Rossa', 4, 37138, NULL, NULL);
+INSERT INTO public.persona VALUES ('TRRDGI97G10L784Q', 'Diego', 'Turri', '1997-06-12', 'Verona', 3468377744, 'diego.turri@gmail.com', 'Giulia Oliosi', 2, 37139, 'diego', 'turri');
+INSERT INTO public.persona VALUES ('UNIMI           ', 'unimi', 'unimi', '2000-01-01', 'unimi', 0, 'unimi@unimi.it', 'unimi', 0, 0, 'unimi', 'unimi');
+
+
+--
+-- TOC entry 3828 (class 0 OID 20798)
+-- Dependencies: 213
+-- Data for Name: dipendente; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.dipendente VALUES ('TRRDGI97G10L784Q', 3, 'Medico di base');
+INSERT INTO public.dipendente VALUES ('UNIMI           ', 0, 'front desk');
+
+
+--
+-- TOC entry 3825 (class 0 OID 20769)
+-- Dependencies: 210
+-- Data for Name: titololavorativo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3851 (class 0 OID 21109)
+-- Dependencies: 236
+-- Data for Name: conseguito; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3841 (class 0 OID 20937)
+-- Dependencies: 226
+-- Data for Name: contratto; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3831 (class 0 OID 20836)
+-- Dependencies: 216
+-- Data for Name: esame; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.esame VALUES ('00456283791', 'Check Up', 45.00, 0.00, 'Nessuna', 'Controllo');
+INSERT INTO public.esame VALUES ('2342424', 'Vista', 100.00, 13.00, 'nessuna', 'Oculistico');
+
+
+--
+-- TOC entry 3848 (class 0 OID 21057)
+-- Dependencies: 233
+-- Data for Name: reparto; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.reparto VALUES ('01', 'Chirurgia generale', 3468312388, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('01', 'Pediatrico', 3468312383, '8:00-12:00');
+INSERT INTO public.reparto VALUES ('01', 'Diagnostico', 3468312342, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('02', 'Chirurgia generale', 3468313847, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('02', 'Pediatrico', 3468313230, '9:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('02', 'Diagnostico', 3468312837, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('03', 'Chirurgia generale', 3468311103, '10:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('03', 'Diagnostico', 3468313809, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('03', 'Oculistica', 3468327384, '8:00-12:00
+15:00-17:00');
+INSERT INTO public.reparto VALUES ('03', 'Pediatrico', 3468313000, '8:00-12:00
+15:00-17:00');
+
+
+--
+-- TOC entry 3849 (class 0 OID 21069)
+-- Dependencies: 234
+-- Data for Name: interna; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.interna VALUES ('01', '101', 1, 230.00, 450.00, 345.00, '01', 'Chirurgia generale', '092302');
+INSERT INTO public.interna VALUES ('01', '201', 2, 230.00, 450.00, 345.00, '01', 'Chirurgia generale', '092345');
+INSERT INTO public.interna VALUES ('01', '202', 2, 230.00, 600.00, 650.00, '01', 'Diagnostico', '092394');
+INSERT INTO public.interna VALUES ('01', '300', 3, 320.00, 400.00, 400.00, '01', 'Pediatrico', '092888');
+INSERT INTO public.interna VALUES ('02', '103', 1, 230.00, 566.00, 345.00, '02', 'Chirurgia generale', '092889');
+INSERT INTO public.interna VALUES ('02', '101', 1, 234.00, 450.00, 624.00, '02', 'Diagnostico', '099002');
+INSERT INTO public.interna VALUES ('02', '202', 2, 320.00, 452.00, 524.00, '02', 'Pediatrico', '293847');
+INSERT INTO public.interna VALUES ('03', '100', 1, 300.00, 433.00, 593.00, '03', 'Chirurgia generale', '293848');
+INSERT INTO public.interna VALUES ('03', '102', 1, 300.00, 500.00, 245.00, '03', 'Diagnostico', '092332');
+INSERT INTO public.interna VALUES ('03', '222', 2, 320.00, 608.00, 664.00, '03', 'Oculistica', '099429');
+INSERT INTO public.interna VALUES ('03', '212', 2, 310.00, 394.00, 452.00, '03', 'Pediatrico', '093949');
+
+
+--
+-- TOC entry 3850 (class 0 OID 21091)
+-- Dependencies: 235
+-- Data for Name: lavoro; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3829 (class 0 OID 20809)
+-- Dependencies: 214
+-- Data for Name: medico; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.medico VALUES ('TRRDGI97G10L784Q');
+
+
+--
+-- TOC entry 3833 (class 0 OID 20865)
+-- Dependencies: 218
+-- Data for Name: patologia; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3830 (class 0 OID 20819)
+-- Dependencies: 215
+-- Data for Name: paziente; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.paziente VALUES (62738778893847656789, 'BRGDNL97J23U928I', 'TRRDGI97G10L784Q');
+
+
+--
+-- TOC entry 3836 (class 0 OID 20880)
+-- Dependencies: 221
+-- Data for Name: riempimento; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.riempimento VALUES ('stanza chirurgica', '092302');
+INSERT INTO public.riempimento VALUES ('Ambulatorio generale', '010023');
+INSERT INTO public.riempimento VALUES ('ricovero', '092345');
+
+
+--
+-- TOC entry 3837 (class 0 OID 20895)
+-- Dependencies: 222
+-- Data for Name: postoletto; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.postoletto VALUES ('001020', 'libero', 'ricovero', '092345');
+
+
+--
+-- TOC entry 3847 (class 0 OID 21034)
+-- Dependencies: 232
+-- Data for Name: ricovero; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3853 (class 0 OID 21139)
+-- Dependencies: 238
+-- Data for Name: obbiettivo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3826 (class 0 OID 20774)
+-- Dependencies: 211
+-- Data for Name: specializzazione; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3842 (class 0 OID 20955)
+-- Dependencies: 227
+-- Data for Name: possiede; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3832 (class 0 OID 20844)
+-- Dependencies: 217
+-- Data for Name: prescrizione; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.prescrizione VALUES ('00000001', '2022-10-01', 1, NULL, 'TRRDGI97G10L784Q', '00456283791', 62738778893847656789);
+
+
+--
+-- TOC entry 3856 (class 0 OID 21339)
+-- Dependencies: 241
+-- Data for Name: slottemporale; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-02', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-03', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-05', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-06', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-07', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-08', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-09', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-10', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-11', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-12', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-13', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-14', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-04', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-15', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-16', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-17', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-18', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-19', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-20', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-21', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-22', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-23', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-24', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-25', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-26', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-27', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-28', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-29', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-30', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '08:00-09:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '09:00-10:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '10:00-11:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '11:00-12:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '15:00-16:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '16:00-17:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '17:00-18:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-31', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '18:00-19:00', '010023', 'f');
+INSERT INTO public.slottemporale VALUES ('2022-08-01', '08:00-09:00', '010023', 't');
+INSERT INTO public.slottemporale VALUES ('2022-09-01', '8:00-9:00', '092345', 'f');
+
+
+--
+-- TOC entry 3846 (class 0 OID 21013)
+-- Dependencies: 231
+-- Data for Name: prenotazione; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.prenotazione VALUES ('00000001', 62738778893847656789, '2022-07-17', '2022-08-01', '08:00-09:00', '010023');
+
+
+--
+-- TOC entry 3852 (class 0 OID 21124)
+-- Dependencies: 237
+-- Data for Name: presenza; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3843 (class 0 OID 20970)
+-- Dependencies: 228
+-- Data for Name: primario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3844 (class 0 OID 20980)
+-- Dependencies: 229
+-- Data for Name: viceprimario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3845 (class 0 OID 20995)
+-- Dependencies: 230
+-- Data for Name: sostituzione; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3840 (class 0 OID 20932)
+-- Dependencies: 225
+-- Data for Name: turno; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3855 (class 0 OID 21169)
+-- Dependencies: 240
+-- Data for Name: svolge; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+-- Completed on 2022-07-19 19:09:43 CEST
+
+--
+-- PostgreSQL database dump complete
+--
+
